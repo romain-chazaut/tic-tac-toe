@@ -1,6 +1,7 @@
 from tkinter import *
 window = Tk()
 window.title("Tic Tac Toa")
+from tkinter import messagebox
 
 def Button_click(bu):
     pass
@@ -29,4 +30,45 @@ bu7.grid(row=2, column=0)
 bu8.grid(row=2, column=1)
 bu9.grid(row=2, column=2)
 
+player_turn = True  
+
+def Button_click(bu):
+    global player_turn
+
+    if bu["text"] == "" and player_turn:
+        bu["text"] = "X"
+        player_turn = not player_turn
+    elif bu["text"] == "" and not player_turn:
+        bu["text"] = "O"
+        player_turn = not player_turn
+
+    check_winner()
+
+def check_winner():
+    winner = None
+    winning_combinations = [
+        [bu1, bu2, bu3],
+        [bu4, bu5, bu6],
+        [bu7, bu8, bu9],
+        [bu1, bu4, bu7],
+        [bu2, bu5, bu8],
+        [bu3, bu6, bu9],
+        [bu1, bu5, bu9],
+        [bu3, bu5, bu7]
+    ]
+
+    for combination in winning_combinations:
+        if combination[0]["text"] == combination[1]["text"] == combination[2]["text"] != "":
+            winner = combination[0]["text"]
+            break
+
+    if winner:
+        messagebox.showinfo("Tic Tac Toe", f"Le joueur {winner} a gagné !")
+        window.quit()
+
+# ... (Le code pour définir et disposer les boutons reste inchangé)
+
 window.mainloop()
+
+
+
