@@ -6,17 +6,17 @@ from tkinter import messagebox
 def Button_click(bu):
     pass
 
-bu1 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu1))
-bu2 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu2))
-bu3 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu3))
+bu1 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu1))
+bu2 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu2))
+bu3 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu3))
 
-bu4 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu4))
-bu5 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu5))
-bu6 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu6))
+bu4 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu4))
+bu5 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu5))
+bu6 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu6))
 
-bu7 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu7))
-bu8 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu8))
-bu9 = Button(window, text="", font=("courrier", 20), height=3, width=6, bg="SystemButtonFace", command=lambda:Button_click(bu9))
+bu7 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu7))
+bu8 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu8))
+bu9 = Button(window, text="", font=("courrier", 30), height=3, width=7, bg="SystemButtonFace", command=lambda:Button_click(bu9))
 
 bu1.grid(row=0, column=0)
 bu2.grid(row=0, column=1)
