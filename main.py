@@ -2,6 +2,7 @@ from tkinter import *
 window = Tk()
 window.title("Tic Tac Toa")
 from tkinter import messagebox
+from ia import choose_random_move
 
 def Button_click(bu):
     pass
@@ -35,14 +36,15 @@ player_turn = True
 def Button_click(bu):
     global player_turn
 
-    if bu["text"] == "" and player_turn:
+    if bu["text"] == "":
         bu["text"] = "X"
-        player_turn = not player_turn
-    elif bu["text"] == "" and not player_turn:
-        bu["text"] = "O"
-        player_turn = not player_turn
+        check_winner()
 
-    check_winner()
+        ai_move = choose_random_move([bu1, bu2, bu3, bu4, bu5, bu6, bu7, bu8, bu9])
+        if ai_move:
+            ai_move["text"] = "O"
+            check_winner()
+
 
 def check_winner():
     winner = None
@@ -64,7 +66,7 @@ def check_winner():
 
     if winner:
         messagebox.showinfo("Tic Tac Toe", f"Le joueur {winner} a gagné !")
-        window.quit()
+        window.quit("rejouez")
 
     else:
         is_full = True
@@ -75,7 +77,10 @@ def check_winner():
 
         if is_full:
             messagebox.showinfo("Tic Tac Toe", "Match nul !")
-            window.quit()
+            window.quit("rejouer")
+
+
+
 
 
 
